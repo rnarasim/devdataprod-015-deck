@@ -23,7 +23,7 @@ We are currently working on a project to migrate our ETL (Extract, Transform and
  * Chart below shows Batch Performance gained by Functional Area/Project:
 
 ![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png) 
-* If you are interested in a test drive - access the app here: https://rnarasim.shinyapps.io/ETLUpgradeProjectPerformance
+ * If you are interested in a test drive - access the app here: https://rnarasim.shinyapps.io/ETLUpgradeProjectPerformance
 
 
 ## What is in it for Functional Area Managers?

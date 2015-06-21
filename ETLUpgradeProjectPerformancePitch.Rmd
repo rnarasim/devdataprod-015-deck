@@ -54,7 +54,7 @@ weekly_summary <- weekly_summary %>% arrange( desc(BatchSavings))
 weekly_summary$ProjectRank <- reorder(weekly_summary$Project , weekly_summary$BatchSavings)
 ggplot(weekly_summary, aes(x=ProjectRank, y=BatchSavings, fill=Project)) + geom_bar(stat="identity", position="dodge") + xlab("Area")+ ylab("Batch Savings (Hours)") + ggtitle("Average Batch Savings Per Week By Area") + geom_text(aes(label=round(BatchSavings)), hjust=0) +coord_flip() + scale_fill_discrete(name = "Area")
 ```
-* If you are interested in a test drive - access the app here: https://rnarasim.shinyapps.io/ETLUpgradeProjectPerformance
+ * If you are interested in a test drive - access the app here: https://rnarasim.shinyapps.io/ETLUpgradeProjectPerformance
 
 
 ## What is in it for Functional Area Managers?
