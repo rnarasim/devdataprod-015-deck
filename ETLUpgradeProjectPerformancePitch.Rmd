@@ -31,6 +31,14 @@ ProjectInfoTable <- xtable(ProjectInfo)
 ```
 We are currently working on a project to migrate our ETL (Extract, Transform and Load) Platform.  ETL Jobs are categorized into many projects based on functional areas. Each functional team is interested in reviewing the jobs they own and support. To date we have migrated `r TotalProjects` projects and total of `r TotalJobs` jobs. Monitoring performance of these projects is crucial for success of the teams. With several thousands of of these jobs executing on a daily basis - it could be quiet challenging to get keep tabs on the Batch Performance. This app comes to your rescue!!! All you need to know is your functional area/project name. The app helps monitor the batch performance gained by the migration project and helps developers pin point batch delays to a set of jobs to fine tune.
 
+
+* If you are interested in a test drive - access the app here: https://rnarasim.shinyapps.io/ETLUpgradeProjectPerformance
+
+
+
+
+## ETL Project Status
+
  * Chart below shows Batch Performance gained by Functional Area/Project:
 
 ```{r, echo=FALSE}
@@ -46,21 +54,7 @@ weekly_summary <- weekly_summary %>% arrange( desc(BatchSavings))
 weekly_summary$ProjectRank <- reorder(weekly_summary$Project , weekly_summary$BatchSavings)
 ggplot(weekly_summary, aes(x=ProjectRank, y=BatchSavings, fill=Project)) + geom_bar(stat="identity", position="dodge") + xlab("Area")+ ylab("Batch Savings (Hours)") + ggtitle("Average Batch Savings Per Week By Area") + geom_text(aes(label=round(BatchSavings)), hjust=0) +coord_flip() + scale_fill_discrete(name = "Area")
 ```
-
-
-
 * If you are interested in a test drive - access the app here: https://rnarasim.shinyapps.io/ETLUpgradeProjectPerformance
-
-
-
-
-## ETL Project Status
-
- * These are the Projects and Number of Jobs that have been successfully migrated.
-```{r,echo=FALSE,warning=FALSE,message=FALSE,results='asis'}
-
-print (ProjectInfoTable,type='html');
-```
 
 
 ## What is in it for Functional Area Managers?
