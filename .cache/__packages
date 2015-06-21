@@ -1,0 +1,12 @@
+base
+ggplot2
+dplyr
+lubridate
+shiny
+reshape2
+BH
+markdown
+xtable
+devtools
+stringr
+slidify
